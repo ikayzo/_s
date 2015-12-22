@@ -34,6 +34,38 @@ require get_template_directory() . '/lib/template-tags.php';
 require get_template_directory() . '/lib/extras.php';
 
 /**
+ * Load Custom Post Types
+ */
+require get_template_directory() . '/lib/custom-fields.php';
+
+/**
+ * Load Custom Taxonomies
+ */
+require get_template_directory() . '/lib/custom-taxonomies.php';
+
+/**
+ * Load Custom Fields (ACF)
+ */
+require get_template_directory() . '/lib/custom-fields.php';
+
+/**
+ * Custom White Label Functions
+ */
+require get_template_directory() . '/lib/white-label.php';
+
+/**
+ * Admin / Site optimizations
+ */
+require get_template_directory() . '/lib/optimizations.php';
+
+/**
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/lib/jetpack.php';
+
+
+
+/**
+ * Custom Woocommerce functions (optional)
+ */
+// require get_template_directory() . '/lib/ecommerce.php';
