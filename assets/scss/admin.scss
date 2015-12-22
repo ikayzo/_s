@@ -1,0 +1,26 @@
+/* ==========================================================================
+Wordpress Admin
+========================================================================== */
+
+/**
+ * Import our custom color variables
+ */
+@import "base/colors";
+
+
+/**
+ * Override default Wordpress variables
+ */
+@import "admin/variables";
+
+
+/**
+ * Import default Wordpress styles
+ */
+@import "wp-admin/css/colors/admin";
+
+
+/**
+ * Override default Wordpress styles
+ */
+@import "admin/custom-styles";
