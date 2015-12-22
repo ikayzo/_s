@@ -17,12 +17,12 @@ function _s_scripts() {
 	 * Handles toggling the navigation menu for small screens and enables tab
 	 * support for dropdown menus. (optional)
 	 */
-	wp_enqueue_script( '_s-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
+	wp_enqueue_script( '_s-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), '20120206', true );
 
 	/**
 	 * Helps with accessibility for keyboard only users.
 	 */
-	wp_enqueue_script( '_s-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+	wp_enqueue_script( '_s-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array(), '20130115', true );
 
 	/**
 	 * jQuery
@@ -35,14 +35,14 @@ function _s_scripts() {
 
 	// Upgrade Wordpress jQuery version (in case of vendor conflicts - ie. Woocommerce)
 	/*=================================
-	if ( !is_admin() ) { 
-    	add_action("wp_enqueue_scripts", "jquery_enqueue", 11);
-    }
-
     function jquery_enqueue() {
         wp_deregister_script('jquery');
         wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js", false, null);
         wp_enqueue_script('jquery');
+    }
+
+    if ( !is_admin() ) { 
+    	add_action("wp_enqueue_scripts", "jquery_enqueue", 11);
     }
     ==================================*/
 
@@ -78,6 +78,7 @@ function _s_scripts() {
 	  wp_register_script('livereload', 'http://localhost:35729/livereload.js?snipver=1', null, false, true);
 	  wp_enqueue_script('livereload');
 	}
+	
 }
 
 add_action( 'wp_enqueue_scripts', '_s_scripts' );
