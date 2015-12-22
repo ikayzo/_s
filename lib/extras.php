@@ -35,6 +35,13 @@ add_filter( 'upload_mimes', 'cc_mime_types' );
 
 
 /**
+ * Remove updates
+ */
+remove_action( 'load-update-core.php', 'wp_update_themes' );
+add_filter( 'pre_site_transient_update_themes', create_function( '$a', "return null;" ) );
+
+
+/**
  * Selects Custom Post Type Templates for single and archive pages
  */
 add_filter('template_include', 'custom_template_include');
