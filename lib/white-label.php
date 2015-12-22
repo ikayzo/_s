@@ -34,10 +34,10 @@ function custom_login_logo_title( $title ) {
     return esc_attr( get_bloginfo( 'name' ) );
 }
 
-function custom_login_logo() {
-	$path = get_template_directory_uri();
-	echo "<link rel='stylesheet' href='" . $path . "/login.css' />";
-}
+// function custom_login_logo() {
+// 	$path = get_template_directory_uri();
+// 	echo "<link rel='stylesheet' href='" . $path . "/login.css' />";
+// }
 
 add_filter( 'login_headerurl', 'custom_login_logo_url' );
 add_filter( 'login_headertitle', 'custom_login_logo_title' );

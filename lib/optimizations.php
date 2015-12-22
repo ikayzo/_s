@@ -76,16 +76,18 @@ add_action('widgets_init', 'unregister_default_wp_widgets', 1);
 /**
  * Remove Customizer link under 'Appearance' (optional)
  */
-function remove_editor_menu() {
-  remove_action('admin_menu', '_add_themes_utility_last', 101);
-}
 
-add_action('_admin_menu', 'remove_editor_menu', 1);
+// function remove_editor_menu() {
+//   remove_action('admin_menu', '_add_themes_utility_last', 101);
+// }
+
+// add_action('_admin_menu', 'remove_editor_menu', 1);
 
 
 
 /**
  * Remove user color scheme picker
+ * (use if you are utilizing the admin stylesheet)
  */
 if ( ! function_exists( 'remove_personal_options' ) ) {
   function remove_personal_options( $subject ) {
@@ -124,6 +126,4 @@ if ( !is_admin() ) {
     add_filter( 'script_loader_src', '_remove_query_strings', 15, 1 );
     add_filter( 'style_loader_src', '_remove_query_strings', 15, 1 );
 }
-
-
 
