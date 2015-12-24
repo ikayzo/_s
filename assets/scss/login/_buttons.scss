@@ -1,0 +1,39 @@
+/* ==========================================================================
+Buttons
+========================================================================== */
+
+.login {
+
+	.button {
+		box-shadow: none;
+		text-shadow: none;
+		border: none;
+		background-color: $highlight-color;
+
+		&:hover {
+			background-color: darken($highlight-color, 3%);
+		}
+
+		&:active {
+			transform: none;
+		}
+	}
+
+	// submit button
+	input[type=submit] {
+		display: block;
+		width: 100%;
+		height: auto !important;
+		margin-top: 60px;
+		padding: 15px 0 !important;
+		line-height: normal !important;
+		font-size: 1rem;
+		float: none;
+
+		&:active, &:focus {
+			background-color: darken($highlight-color, 3%);
+			border-color: darken($highlight-color, 3%);
+			box-shadow: none;
+		}
+	}
+}

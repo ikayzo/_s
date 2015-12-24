@@ -1,0 +1,39 @@
+/* ==========================================================================
+Layout - general layout styles
+========================================================================== */
+
+.login {
+	background-color: #fff;
+
+	#login {
+
+		h1 a {
+		 	background: $logo-img-path;
+		 	background-repeat: no-repeat;
+		 	background-position: center center;
+		 	width: 100%;
+		 	background-size: $logo-img-size;
+		}
+	}
+
+	// Messages
+	.message {
+		border-left-color: $highlight-color;
+	}
+
+	#login_error {
+
+		a {
+			color: $highlight-color;
+			text-decoration: none;
+		}
+	}
+
+	// Form
+	form {
+		box-shadow: none;
+		background: transparent;
+		padding-left: 0;
+		padding-right: 0;
+	}
+} 

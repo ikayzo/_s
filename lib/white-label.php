@@ -24,7 +24,7 @@ add_action( 'admin_head', 'admin_css' );
 *  
 *  1. Change logo link title
 *  2. Change logo link url
-*  3. Enqueue custom stylesheet for login page (optional)
+*  3. Enqueue custom stylesheet for login page
 */
 function custom_login_logo_url( $url ) {
     return home_url();
@@ -34,14 +34,14 @@ function custom_login_logo_title( $title ) {
     return esc_attr( get_bloginfo( 'name' ) );
 }
 
-// function custom_login_logo() {
-// 	$path = get_template_directory_uri();
-// 	echo "<link rel='stylesheet' href='" . $path . "/login.css' />";
-// }
+function custom_login_logo() {
+	$path = get_template_directory_uri();
+	echo "<link rel='stylesheet' href='" . $path . "/login.css' />";
+}
 
 add_filter( 'login_headerurl', 'custom_login_logo_url' );
 add_filter( 'login_headertitle', 'custom_login_logo_title' );
-// add_action( 'login_enqueue_scripts', 'custom_login_logo' ); 
+add_action( 'login_enqueue_scripts', 'custom_login_logo' ); 
 
 
 
