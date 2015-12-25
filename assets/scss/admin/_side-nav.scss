@@ -1,0 +1,32 @@
+/* ==========================================================================
+Side Navigation
+========================================================================== */
+
+#adminmenuwrap {
+
+	#adminmenu {
+		margin-top: 0;
+	}
+
+	a.menu-top {
+		padding: 6px 0 !important;
+	}
+
+	// menu icon
+	.wp-menu-image {
+		margin-right: 2px !important;
+	}
+
+	// submenu
+	.wp-has-submenu.wp-not-current-submenu.opensub:hover:after {
+		top: 15px;
+	}
+
+	.wp-submenu {
+
+		li {
+			padding-top: 4px;
+			padding-bottom: 4px;
+		}
+	}
+}

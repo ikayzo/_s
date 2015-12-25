@@ -1,0 +1,68 @@
+/* ==========================================================================
+Top Navigation
+========================================================================== */
+
+#wpadminbar {
+	height: 50px;
+
+	.ab-top-menu {
+
+		li {
+
+			a {
+				height: 100%;
+				line-height: 48px;
+			}
+		}
+	}
+
+	.quicklinks {
+		height: 100%;
+
+		#wp-admin-bar-site-name {
+			height: 100%;
+
+			a {
+				padding-right: 15px;
+
+				@media only screen and (min-width: 783px) {
+					font-size: 15px;
+
+					&:before {
+						margin-top: 7px;				
+					}
+				}
+			}
+		}
+	}
+
+
+	// secondary
+	#wp-admin-bar-top-secondary {
+		height: 100%;
+
+		#wp-admin-bar-my-account {
+			height: 100%;
+
+			a {
+				padding-left: 15px;
+			}
+
+			&.with-avatar > a img {
+				height: 24px;
+				border-radius: 50%;
+				margin-left: 10px;
+				border: none;
+			}
+
+			.ab-submenu {
+				padding-top: 10px;
+
+				img {
+					border-radius: 50%;
+				}
+			}
+		}
+	}
+
+}

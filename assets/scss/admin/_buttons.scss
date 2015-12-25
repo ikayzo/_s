@@ -1,0 +1,25 @@
+/* ==========================================================================
+Buttons
+========================================================================== */
+
+.wp-core-ui {
+
+	.button, .button-primary, .button-secondary, .acf-button {
+		box-shadow: none;
+		border: none;
+
+		&:focus {
+			box-shadow: none;
+		}
+	}
+
+	button {
+
+		&:focus {
+
+			.toggle-indicator:before {
+				box-shadow: none !important;
+			}
+		}
+	}
+}

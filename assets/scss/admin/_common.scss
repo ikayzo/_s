@@ -1,0 +1,30 @@
+/* ==========================================================================
+Common styles
+========================================================================== */
+
+@media only screen and (min-width: 600px) {
+
+	#wpwrap {
+		padding-top: 18px;
+		box-sizing: border-box;
+	}
+}
+
+
+// Footer thank you
+#footer-thankyou {
+	font-style: normal;
+
+	a {
+		color: $highlight-color;
+	}
+}
+
+.footer-blue {
+	background-color: $highlight-color !important;		
+}
+
+
+.metabox-holder .postbox-container .empty-container {
+	border-width: 1px;
+}

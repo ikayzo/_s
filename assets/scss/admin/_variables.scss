@@ -2,61 +2,58 @@
 Define our custom colors
 ========================================================================== */
 
-
-/**
- * Add your own custom colors here
- * (you can also use your color variables)
- */
+// core variables
 
 $text-color: #fff !default;
-$base-color: #080518 !default;
+$base-color: #23282d !default;
 $icon-color: hsl( hue( $base-color ), 7%, 95% ) !default;
-$highlight-color: #C0C0C8 !default;
-$notification-color: #F16D00 !default;
+$highlight-color: #0073aa !default;
+$notification-color: #d54e21 !default;
+
+
+// global
 
 $body-background: #f1f1f1 !default;
+
 $link: #0073aa !default;
 $link-focus: lighten( $link, 10% ) !default;
+
 $button-color: $highlight-color !default;
 $form-checked: $highlight-color !default;
 
 
+// admin menu & admin-bar
 
+$menu-text: $text-color !default;
+$menu-icon: $icon-color !default;
+$menu-background: $base-color !default;
 
-/**
- * Admin menu & menu bar (optional)
- */
+$menu-highlight-text: $text-color !default;
+$menu-highlight-icon: $text-color !default;
+$menu-highlight-background: $highlight-color !default;
 
-$menu-text: $text-color;
-$menu-icon: $icon-color;
-$menu-background: $base-color;
+$menu-current-text: $menu-highlight-text !default;
+$menu-current-icon: $menu-highlight-icon !default;
+$menu-current-background: $menu-highlight-background !default;
 
-$menu-highlight-text: $text-color;
-$menu-highlight-icon: $text-color;
-$menu-highlight-background: $highlight-color;
+$menu-submenu-text: mix( $base-color, $text-color, 30% ) !default;
+$menu-submenu-background: darken( $base-color, 7% ) !default;
+$menu-submenu-background-alt: desaturate( lighten( $menu-background, 7% ), 7% ) !default;
 
-$menu-current-text: $menu-highlight-text;
-$menu-current-icon: $menu-highlight-icon;
-$menu-current-background: $menu-highlight-background;
+$menu-submenu-focus-text: $highlight-color !default;
+$menu-submenu-current-text: $text-color !default;
 
-$menu-submenu-text: mix( $base-color, $text-color, 30% );
-$menu-submenu-background: darken( $base-color, 7% );
-$menu-submenu-background-alt: desaturate( lighten( $menu-background, 7% ), 7% );
+$menu-bubble-text: $text-color !default;
+$menu-bubble-background: $notification-color !default;
+$menu-bubble-current-text: $text-color !default;
+$menu-bubble-current-background: $menu-submenu-background !default;
 
-$menu-submenu-focus-text: $highlight-color;
-$menu-submenu-current-text: $text-color;
+$menu-collapse-text: $menu-icon !default;
+$menu-collapse-icon: $menu-icon !default;
+$menu-collapse-focus-text: $text-color !default;
+$menu-collapse-focus-icon: $menu-highlight-icon !default;
 
-$menu-bubble-text: $text-color;
-$menu-bubble-background: $notification-color;
-$menu-bubble-current-text: $text-color;
-$menu-bubble-current-background: $menu-submenu-background;
+$adminbar-avatar-frame: lighten( $menu-background, 7% ) !default;
+$adminbar-input-background: lighten( $menu-background, 7% ) !default;
 
-$menu-collapse-text: $menu-icon;
-$menu-collapse-icon: $menu-icon;
-$menu-collapse-focus-text: $text-color;
-$menu-collapse-focus-icon: $menu-highlight-icon;
-
-$adminbar-avatar-frame: lighten( $menu-background, 7% );
-$adminbar-input-background: lighten( $menu-background, 7% );
-
-$menu-customizer-text: mix( $base-color, $text-color, 40% );
+$menu-customizer-text: mix( $base-color, $text-color, 40% ) !default;

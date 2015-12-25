@@ -21,6 +21,10 @@ Wordpress Admin
 
 
 /**
- * Override default Wordpress styles
+ * Import our custom styles
  */
-@import "admin/custom-styles";
+@import "admin/buttons";
+@import "admin/form-elements";
+@import "admin/top-nav";
+@import "admin/side-nav";
+@import "admin/common";
