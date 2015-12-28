@@ -5,8 +5,9 @@ Buttons
 .wp-core-ui {
 
 	.button, .button-primary, .button-secondary, .acf-button {
-		box-shadow: none;
+		box-shadow: none !important;
 		border: none;
+		text-shadow: none;
 
 		&:focus {
 			box-shadow: none;
