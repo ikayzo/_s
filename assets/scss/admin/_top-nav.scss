@@ -4,6 +4,7 @@ Top Navigation
 
 #wpadminbar {
 	height: 50px;
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 
 	.ab-top-menu {
 
@@ -46,6 +47,17 @@ Top Navigation
 
 			a {
 				padding-left: 15px;
+
+				&.ab-item {
+
+					@media only screen and (min-width: 783px) {
+						font-size: 15px;
+
+						&:before {
+							margin-top: 7px;				
+						}
+					}
+				}
 			}
 
 			&.with-avatar > a img {
