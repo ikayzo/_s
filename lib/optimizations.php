@@ -74,14 +74,23 @@ add_action('widgets_init', 'unregister_default_wp_widgets', 1);
 
 
 /**
- * Remove Customizer link under 'Appearance' (optional)
+ * Remove 'Appearance' submenu items (optional)
  */
+function hide_menu_items() {
+    remove_submenu_page('plugins.php','plugin-editor.php'); // plugin editor
+    remove_submenu_page( 'themes.php', 'theme-editor.php' ); // theme editor
+}
 
-// function remove_editor_menu() {
-//   remove_action('admin_menu', '_add_themes_utility_last', 101);
-// }
+function remove_appearance_menus () {
+    global $submenu;
+    unset($submenu['themes.php'][6]); // Customize
+    unset($submenu['themes.php'][20]); // Background
+}
 
-// add_action('_admin_menu', 'remove_editor_menu', 1);
+// uncomment below to initialize
+
+// add_action('admin_init','hide_menu_items');
+// add_action('admin_menu', 'remove_appearance_menus');
 
 
 

@@ -6,12 +6,24 @@ Buttons
 
 	.button, .button-primary, .button-secondary, .acf-button {
 		box-shadow: none !important;
-		border: none;
 		text-shadow: none;
 
 		&:focus {
 			box-shadow: none;
+			transform: none;
 		}
+	}
+
+	.button {
+		border: 1px solid #ccc;
+
+		&:hover {
+			border-color: #bdbdbd;
+		}
+	}
+
+	.button-primary, .button-secondary {
+		border: none;
 	}
 
 	button {
