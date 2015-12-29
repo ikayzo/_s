@@ -40,3 +40,9 @@ add_filter( 'woocommerce_enqueue_styles', 'woocommerce_dequeue_styles' );
 
 
 
+/**
+ * Hides the "Install the WooThemes Updater plugin..." message
+ * https://wordpress.org/support/topic/hiding-install-the-woothemes-updater-plugin-alert-on-dashboard#post-4178154
+ */
+remove_action( 'admin_notices', 'woothemes_updater_notice' );
+
