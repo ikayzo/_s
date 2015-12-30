@@ -36,7 +36,7 @@ require get_template_directory() . '/lib/extras.php';
 /**
  * Load Custom Post Types
  */
-require get_template_directory() . '/lib/custom-fields.php';
+require get_template_directory() . '/lib/custom-post-types.php';
 
 /**
  * Load Custom Taxonomies
