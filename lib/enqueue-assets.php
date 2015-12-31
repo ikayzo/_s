@@ -33,7 +33,7 @@ function _s_scripts() {
 	}
 
 
-	// Upgrade Wordpress jQuery version (in case of vendor conflicts - ie. Woocommerce)
+	// Upgrade Wordpress copy of jQuery
 	/*=================================
     function jquery_enqueue() {
         wp_deregister_script('jquery');
