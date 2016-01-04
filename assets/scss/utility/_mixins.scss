@@ -1,0 +1,32 @@
+/* ==========================================================================
+Mixins
+========================================================================== */
+
+/**
+ * Gradients
+ * (courtesy of @micjamking)
+ */
+
+// 2-color
+@mixin two-color-gradient($direction, $startColor, $endColor) {
+	background-color: $startColor;
+	background-image: linear-gradient($direction, $startColor, $endColor);
+}
+
+// 3-color
+@mixin three-color-gradient($direction, $startColor, $start-position, $middleColor, $middle-position, $endColor, $end-position) {
+	background-color: $startColor;
+	background-image: linear-gradient($direction, $startColor $start-position, $middleColor $middle-position, $endColor $end-position);
+}
+
+
+/**
+ * Layout
+ */
+
+// vertically center an element (50% is default)
+@mixin verticalAlign($top: 50%) {
+	position: relative;
+	top: $top;
+	transform: translateY(-50%);
+}

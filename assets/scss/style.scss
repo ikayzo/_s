@@ -11,25 +11,62 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 */
 
+
 /**
- * Vendor
+ * Include our custom color variables
  */
-@import "settings";
-@import "normalize";
-@import "foundation";
+@import "base/colors";
+
+
+
+/**
+ * Vendor stylesheets
+ */
+@import "vendors";
+
+
 
 /**
  * Utility
+ * 
+ * Sass code that doesn't output to any CSS 
+ * (ie. mixins and functions)
  */
+@import "utility/variables";
+@import "utility/functions";
+@import "utility/mixins";
+
 
 /**
  * Base
+ * 
+ * Contains global styles 
+ * (ie. typography, colors, buttons, animations)
  */
+@import "base/buttons";
+@import "base/typography";
+@import "base/layout";
+
 
 /**
  * Modules
+ *
+ * Contains reusable styles 
+ * (ie. header, footer, dropdowns, forms, navigation)
  */
+@import "modules/header";
+@import "modules/footer";
+
+
 
 /**
  * Pages
+ *
+ * Contains page-specific styles and layouts 
+ * (ie. homepage, about, contact)
  */
+@import "pages/page-home";
+
+
+
+

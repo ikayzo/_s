@@ -1,0 +1,58 @@
+/* ==========================================================================
+Form Elements
+========================================================================== */
+
+.login {
+
+	input[type=text],
+	input[type=password],
+	input[type=radio], 
+	input[type=checkbox] {
+
+		box-shadow: none;
+	}
+
+	input[type=text],
+	input[type=password] {
+		border-top: none;
+		border-left: none;
+		border-right: none;
+		background: transparent;
+		transition: border 0.15s ease-in-out;
+
+		&:focus {
+			border-bottom-color: $highlight-color;
+		}
+	}
+
+	input[type=checkbox] {
+		background: transparent !important;
+
+		&:focus {
+			border-color: $highlight-color;
+		}
+
+		&:checked:before {
+			color: $highlight-color;
+		}
+	}
+
+	.forgetmenot {
+		margin-top: 15px;
+	}
+
+
+	// links
+	p {
+
+		&#backtoblog, &#nav {
+			padding: 0;
+		}
+
+		a {
+			&:hover {
+				color: $highlight-color !important;
+			}
+		}
+	}
+}

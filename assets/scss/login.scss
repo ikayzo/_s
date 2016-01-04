@@ -1,0 +1,24 @@
+/* ==========================================================================
+Wordpress Login Screen
+========================================================================== */
+
+/**
+ * Import our custom color variables
+ */
+@import "base/colors"; 
+@import "admin/variables";
+
+
+/**
+ * Add login logo image
+ */
+ $logo-img-path: url('../../../wp-admin/images/w-logo-blue.png') !default;
+ $logo-img-size: 84px !default;
+
+
+/**
+ * Custom stylesheets
+ */
+@import "login/buttons";
+@import "login/form-elements";
+@import "login/layout";
