@@ -95,6 +95,39 @@ function remove_appearance_menus () {
 
 
 /**
+ * Disable help dropdown
+ */
+function disable_help_dropdown($old_help, $screen_id, $screen){
+    $screen->remove_help_tabs();
+    return $old_help;
+}
+
+add_filter( 'contextual_help', 'disable_help_dropdown', 999, 3 );
+
+
+
+/**
+ * Remove 'Appearance' submenu items (optional)
+ */
+function hide_menu_items() {
+    remove_submenu_page('plugins.php','plugin-editor.php'); // plugin editor
+    remove_submenu_page( 'themes.php', 'theme-editor.php' ); // theme editor
+}
+
+function remove_appearance_menus () {
+    global $submenu;
+    unset($submenu['themes.php'][6]); // Customize
+    unset($submenu['themes.php'][20]); // Background
+}
+
+// uncomment below to initialize
+
+// add_action('admin_init','hide_menu_items');
+// add_action('admin_menu', 'remove_appearance_menus');
+
+
+
+/**
  * Remove user color scheme picker
  * (use if you are utilizing the admin stylesheet)
  */

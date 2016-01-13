@@ -35,7 +35,7 @@ add_filter( 'upload_mimes', 'cc_mime_types' );
 
 
 /**
- * Remove updates
+ * Remove theme updates
  */
 remove_action( 'load-update-core.php', 'wp_update_themes' );
 add_filter( 'pre_site_transient_update_themes', create_function( '$a', "return null;" ) );
