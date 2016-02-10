@@ -13,9 +13,10 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 
 /**
- * Include our custom color variables
+ * Include our custom variables
  */
 @import "base/colors";
+@import "base/variables";
 
 
 
@@ -32,7 +33,6 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
  * Sass code that doesn't output to any CSS 
  * (ie. mixins and functions)
  */
-@import "utility/variables";
 @import "utility/functions";
 @import "utility/mixins";
 
