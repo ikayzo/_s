@@ -5,7 +5,7 @@ Define our custom colors
 // core variables
 
 $text-color: #fff !default;
-$base-color: #202020 !default;
+$base-color: #263238 !default;
 $icon-color: hsl( hue( $base-color ), 7%, 95% ) !default;
 $highlight-color: #0277BD !default;
 $notification-color: #F44336 !default;
@@ -13,7 +13,7 @@ $notification-color: #F44336 !default;
 
 // global
 
-$body-background: #f5f5f5 !default;
+$body-background: #fafafa !default;
 
 $link: #0277BD !default;
 $link-focus: lighten( $link, 10% ) !default;
