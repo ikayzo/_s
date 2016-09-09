@@ -3,94 +3,99 @@ Top Navigation
 ========================================================================== */
 
 #wpadminbar {
-	height: 50px;
-	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  height: 50px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 
-	.ab-top-menu {
+  .ab-top-menu {
 
-		li {
+    li {
 
-			a {
-				height: 100%;
-				line-height: 48px;
-			}
-		}
-	}
+      a {
+        height: 100%;
+        line-height: 48px;
+      }
+    }
+  }
 
-	.quicklinks {
-		height: 100%;
+  .quicklinks {
+    height: 100%;
 
-		#wp-admin-bar-site-name {
-			height: 100%;
+    > ul > li > a {
+      display: flex !important;
+      align-items: center;
+    }
 
-			.ab-submenu {
-				padding: 15px 0;
+    #wp-admin-bar-site-name {
+      height: 100%;
 
-				a {
-					font-size: 13px;
-				}
-			}
+      .ab-submenu {
+        padding: 15px 0;
 
-			a {
-				padding-right: 15px;
+        a {
+          font-size: 13px;
+        }
+      }
 
-				@media only screen and (min-width: 783px) {
-					font-size: 14px;
+      a {
+        padding-right: 15px;
 
-					&:before {
-						margin-top: 7px;				
-					}
-				}
-			}
-		}
-	}
+        @media only screen and (min-width: 783px) {
+          font-size: 14px;
+
+          &:before {
+            top: 0;
+          }
+        }
+      }
+    }
+  }
 
 
-	// secondary
-	#wp-admin-bar-top-secondary {
-		height: 100%;
+  // secondary
+  #wp-admin-bar-top-secondary {
+    height: 100%;
 
-		#wp-admin-bar-my-account {
-			height: 100%;
+    #wp-admin-bar-my-account {
+      height: 100%;
 
-			a {
-				padding-left: 15px;
+      a {
+        padding-left: 15px;
 
-				&.ab-item {
+        &.ab-item {
 
-					@media only screen and (min-width: 783px) {
-						font-size: 14px;
+          @media only screen and (min-width: 783px) {
+            font-size: 14px;
 
-						&:before {
-							margin-top: 7px;				
-						}
-					}
-				}
-			}
+            &:before {
+              margin-top: 7px;
+            }
+          }
+        }
+      }
 
-			&.with-avatar > a img {
-				height: 24px;
-				border-radius: 50%;
-				margin-left: 10px;
-				border: none;
-			}
+      &.with-avatar > a img {
+        height: 24px;
+        border-radius: 50%;
+        margin-left: 10px;
+        border: none;
+      }
 
-			.ab-submenu {
-				padding-top: 10px;
+      .ab-submenu {
+        padding-top: 10px;
 
-				li {
-					padding: 5px 0;
+        li {
+          padding: 5px 0;
 
-					a {
-						font-size: 13px;
-					}
-				}
+          a {
+            font-size: 13px;
+          }
+        }
 
-				img {
-					border-radius: 50%;
-				}
-			}
-		}
-	}
+        img {
+          border-radius: 50%;
+        }
+      }
+    }
+  }
 
 }
