@@ -15,7 +15,6 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 /**
  * Include our custom variables
  */
-@import "base/colors";
 @import "base/variables";
 
 
@@ -29,8 +28,8 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 /**
  * Utility
- * 
- * Sass code that doesn't output to any CSS 
+ *
+ * Sass code that doesn't output to any CSS
  * (ie. mixins and functions)
  */
 @import "utility/functions";
@@ -39,22 +38,23 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 /**
  * Base
- * 
- * Contains global styles 
- * (ie. typography, colors, buttons, animations)
+ *
+ * Contains global styles
+ * (ie. typography, layout, animations)
  */
-@import "base/buttons";
 @import "base/typography";
+@import "base/animations";
 @import "base/layout";
 
 
 /**
  * Modules
  *
- * Contains reusable styles 
- * (ie. header, footer, dropdowns, forms, navigation)
+ * Contains reusable styles
+ * (ie. header, footer, dropdowns: ;, form elements)
  */
 @import "modules/header";
+@import "modules/form-elements";
 @import "modules/footer";
 
 
@@ -62,11 +62,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 /**
  * Pages
  *
- * Contains page-specific styles and layouts 
+ * Contains page-specific styles and layouts
  * (ie. homepage, about, contact)
  */
 @import "pages/page-home";
-
-
-
-
