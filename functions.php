@@ -19,9 +19,9 @@ require get_template_directory() . '/lib/theme-setup.php';
 require get_template_directory() . '/lib/widgets.php';
 
 /**
- * Enqueue scripts and styles
+ * Enqueue scripts and stylesheets
  */
-require get_template_directory() . '/lib/enqueue-assets.php';
+require get_template_directory() . '/lib/enqueue.php';
 
 /**
  * Custom template tags for this theme.
