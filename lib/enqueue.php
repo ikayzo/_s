@@ -26,7 +26,6 @@ function _s_scripts() {
 
   /**
    * jQuery
-   * (use if you are including your own copy of jQuery)
    */
   if( !is_admin()){
     wp_deregister_script('jquery');
