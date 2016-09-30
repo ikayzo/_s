@@ -60,7 +60,7 @@ function unregister_default_wp_widgets() {
     unregister_widget('WP_Widget_Links');
     unregister_widget('WP_Widget_Meta');
     unregister_widget('WP_Widget_Search');
-    unregister_widget('WP_Widget_Text');
+    // unregister_widget('WP_Widget_Text');
     unregister_widget('WP_Widget_Categories');
     unregister_widget('WP_Widget_Recent_Posts');
     unregister_widget('WP_Widget_Recent_Comments');
@@ -78,7 +78,6 @@ add_action('widgets_init', 'unregister_default_wp_widgets', 1);
  */
 function remove_page_meta_boxes() {
     remove_meta_box('postcustom', 'page', 'normal');
-    remove_meta_box('slugdiv', 'page', 'normal');
 }
 
 add_action( 'admin_menu' , 'remove_page_meta_boxes' );
@@ -90,8 +89,6 @@ add_action( 'admin_menu' , 'remove_page_meta_boxes' );
  */
 function remove_post_meta_boxes() {
     remove_meta_box( 'postcustom' , 'post' , 'normal' );
-    remove_meta_box( 'formatdiv', 'post', 'normal' );
-    remove_meta_box('slugdiv', 'post', 'normal');
 }
 
 add_action( 'admin_menu' , 'remove_post_meta_boxes' );
@@ -156,7 +153,7 @@ Site
  * Remove query strings from static resources
  */
 function _remove_query_strings( $src ){
-	$rqs = explode( '?ver', $src );
+  $rqs = explode( '?ver', $src );
     return $rqs[0];
 }
 
@@ -164,4 +161,3 @@ if ( !is_admin() ) {
     add_filter( 'script_loader_src', '_remove_query_strings', 15, 1 );
     add_filter( 'style_loader_src', '_remove_query_strings', 15, 1 );
 }
-
