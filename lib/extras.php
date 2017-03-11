@@ -65,3 +65,19 @@ function custom_template_include($template) {
 
   return $template;
 }
+
+
+
+/**
+ * Customize the post excerpt
+ */
+// function custom_excerpt_length( $length ) {
+//   return 30;
+// }
+//
+// function new_excerpt_more( $more ) {
+//   return '...';
+// }
+//
+// add_filter('excerpt_more', 'new_excerpt_more');
+// add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
