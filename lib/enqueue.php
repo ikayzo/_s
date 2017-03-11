@@ -17,7 +17,7 @@ function _s_scripts() {
    * Handles toggling the navigation menu for small screens and enables tab
    * support for dropdown menus. (optional)
    */
-  wp_enqueue_script( '_s-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), '20120206', true );
+  // wp_enqueue_script( '_s-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), '20120206', true );
 
   /**
    * Helps with accessibility for keyboard only users.
@@ -33,7 +33,7 @@ function _s_scripts() {
 
   // Upgrade Wordpress copy of jQuery
   function jquery_enqueue() {
-    wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js", false, null);
+    wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js", false, null);
     wp_enqueue_script('jquery');
   }
 
