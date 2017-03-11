@@ -24,13 +24,6 @@ Mixins
  * Layout
  */
 
-// vertically center an element (50% is default)
-@mixin verticalAlign($top: 50%) {
-  position: relative;
-  top: $top;
-  transform: translateY(-50%);
-}
-
 // full, responsive background image
 @mixin fullBg {
   background-size: cover;
