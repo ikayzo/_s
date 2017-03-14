@@ -96,6 +96,21 @@ add_action( 'admin_menu' , 'remove_post_meta_boxes' );
 
 
 /**
+ * Remove menu items
+ */
+function hide_menu_items() {
+  remove_submenu_page( 'themes.php', 'theme-editor.php' ); // theme editor
+
+  global $submenu;
+  unset($submenu['themes.php'][6]); // customizer
+  unset($submenu['themes.php'][20]); // background
+}
+
+add_action('admin_init','hide_menu_items');
+
+
+
+/**
  * Disable help dropdown
  */
 function disable_help_dropdown($old_help, $screen_id, $screen){
