@@ -155,27 +155,27 @@ add_action('admin_menu', 'remove_appearance_menus');
 /**
  * Disable comments
  */
-function disable_comments_post_types_support() {
-  $post_types = get_post_types();
-  foreach ($post_types as $post_type) {
-    if(post_type_supports($post_type, 'comments')) {
-      remove_post_type_support($post_type, 'comments');
-    }
-  }
-}
-
-// Close comments on the front-end
-function disable_comments_status() {
-  return false;
-}
-
-// Redirect any user trying to access comments page
-function disable_comments_admin_menu_redirect() {
-  global $pagenow;
-  if ($pagenow === 'edit-comments.php') {
-    wp_redirect(admin_url()); exit;
-  }
-}
+// function disable_comments_post_types_support() {
+//   $post_types = get_post_types();
+//   foreach ($post_types as $post_type) {
+//     if(post_type_supports($post_type, 'comments')) {
+//       remove_post_type_support($post_type, 'comments');
+//     }
+//   }
+// }
+//
+// // Close comments on the front-end
+// function disable_comments_status() {
+//   return false;
+// }
+//
+// // Redirect any user trying to access comments page
+// function disable_comments_admin_menu_redirect() {
+//   global $pagenow;
+//   if ($pagenow === 'edit-comments.php') {
+//     wp_redirect(admin_url()); exit;
+//   }
+// }
 
 // add_action('admin_init', 'disable_comments_post_types_support');
 // add_filter('comments_open', 'disable_comments_status', 20, 2);
@@ -188,22 +188,22 @@ function disable_comments_admin_menu_redirect() {
  * Remove emojicon support
  * http://wordpress.stackexchange.com/a/185578
  */
-function disable_wp_emojicons() {
-  // all actions related to emojis
-  remove_action( 'admin_print_styles', 'print_emoji_styles' );
-  remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
-  remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
-  remove_action( 'wp_print_styles', 'print_emoji_styles' );
-  remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
-  remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
-  remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
-
-  // filter to remove TinyMCE emojis
-  add_filter( 'tiny_mce_plugins', 'disable_emojicons_tinymce' );
-
-  // remove DNS prefetch
-  add_filter( 'emoji_svg_url', '__return_false' );
-}
+// function disable_wp_emojicons() {
+//   // all actions related to emojis
+//   remove_action( 'admin_print_styles', 'print_emoji_styles' );
+//   remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+//   remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+//   remove_action( 'wp_print_styles', 'print_emoji_styles' );
+//   remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
+//   remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
+//   remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
+//
+//   // filter to remove TinyMCE emojis
+//   add_filter( 'tiny_mce_plugins', 'disable_emojicons_tinymce' );
+//
+//   // remove DNS prefetch
+//   add_filter( 'emoji_svg_url', '__return_false' );
+// }
 
 // function disable_emojicons_tinymce( $plugins ) {
 //   if ( is_array( $plugins ) ) {
