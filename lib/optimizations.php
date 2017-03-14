@@ -217,6 +217,28 @@ add_action('admin_menu', 'remove_appearance_menus');
 
 
 
+/**
+ * Clean up assets
+ */
+function clean_script_tag($input) {
+  $input = str_replace("type='text/javascript' ", '', $input);
+  return str_replace("'", '"', $input);
+}
+
+function clean_style_tag( $tag ) {
+  return preg_replace( '~\s+type=["\'][^"\']++["\']~i', '', $tag );
+}
+
+add_filter('script_loader_tag', 'clean_script_tag');
+add_filter( 'style_loader_tag', 'clean_style_tag' );
+
+
+/**
+ * Remove recent comments widget style in <head>
+ */
+add_filter( 'show_recent_comments_widget_style', '__return_false' );
+
+
 
 /* ==========================================================================
 Site
