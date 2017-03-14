@@ -184,6 +184,24 @@ add_action('admin_menu', 'remove_appearance_menus');
 
 
 
+/* ==========================================================================
+Site
+========================================================================== */
+
+/**
+ * Remove query strings from static resources
+ */
+function _remove_query_strings( $src ){
+  $rqs = explode( '?ver', $src );
+  return $rqs[0];
+}
+
+if ( !is_admin() ) {
+  add_filter( 'script_loader_src', '_remove_query_strings', 15, 1 );
+  add_filter( 'style_loader_src', '_remove_query_strings', 15, 1 );
+}
+
+
 /**
  * Remove emojicon support
  * http://wordpress.stackexchange.com/a/185578
@@ -216,7 +234,6 @@ add_action('admin_menu', 'remove_appearance_menus');
 // add_action( 'init', 'disable_wp_emojicons' );
 
 
-
 /**
  * Clean up assets
  */
@@ -237,22 +254,3 @@ add_filter( 'style_loader_tag', 'clean_style_tag' );
  * Remove recent comments widget style in <head>
  */
 add_filter( 'show_recent_comments_widget_style', '__return_false' );
-
-
-
-/* ==========================================================================
-Site
-========================================================================== */
-
-/**
- * Remove query strings from static resources
- */
-function _remove_query_strings( $src ){
-  $rqs = explode( '?ver', $src );
-  return $rqs[0];
-}
-
-if ( !is_admin() ) {
-  add_filter( 'script_loader_src', '_remove_query_strings', 15, 1 );
-  add_filter( 'style_loader_src', '_remove_query_strings', 15, 1 );
-}
