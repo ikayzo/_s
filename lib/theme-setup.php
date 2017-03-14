@@ -60,10 +60,10 @@ function _s_setup() {
   ) );
 
   // Set up the WordPress core custom background feature.
-  add_theme_support( 'custom-background', apply_filters( '_s_custom_background_args', array(
-    'default-color' => 'ffffff',
-    'default-image' => '',
-  ) ) );
+  // add_theme_support( 'custom-background', apply_filters( '_s_custom_background_args', array(
+  //   'default-color' => 'ffffff',
+  //   'default-image' => '',
+  // ) ) );
 
   // Add theme support for selective refresh for widgets.
   add_theme_support( 'customize-selective-refresh-widgets' );
@@ -72,6 +72,7 @@ function _s_setup() {
    * Hide admin bar for all users
    */
   add_filter('show_admin_bar', '__return_false');
+
   /**
    * Clean up wp_head
    */
@@ -91,6 +92,7 @@ function _s_setup() {
 endif;
 
 add_action( 'after_setup_theme', '_s_setup' );
+
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
