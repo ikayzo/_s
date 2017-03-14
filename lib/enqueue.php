@@ -22,7 +22,7 @@ function _s_scripts() {
   /**
    * Helps with accessibility for keyboard only users.
    */
-  wp_enqueue_script( '_s-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array(), '20130115', true );
+  // wp_enqueue_script( '_s-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array(), '20130115', true );
 
   /**
    * jQuery
@@ -33,7 +33,7 @@ function _s_scripts() {
 
   // Upgrade Wordpress copy of jQuery
   function jquery_enqueue() {
-    wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js", false, null);
+    wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js", false, null);
     wp_enqueue_script('jquery');
   }
 
