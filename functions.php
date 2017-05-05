@@ -59,6 +59,11 @@ require get_template_directory() . '/lib/white-label.php';
 require get_template_directory() . '/lib/optimizations.php';
 
 /**
+ * Admin - Custom dashboard widgets
+ */
+require get_template_directory() . '/lib/admin/dashboard-widgets.php';
+
+/**
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/lib/jetpack.php';
