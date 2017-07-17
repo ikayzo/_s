@@ -254,3 +254,25 @@ add_filter( 'style_loader_tag', 'clean_style_tag' );
  * Remove recent comments widget style in <head>
  */
 add_filter( 'show_recent_comments_widget_style', '__return_false' );
+
+
+
+/**
+ * Disable XML-RPC pingbacks
+ */
+function disable_pingbacks( $methods ) {
+	unset( $methods['pingback.ping'] );
+	return $methods;
+}
+
+add_filter( 'xmlrpc_methods', 'disable_pingbacks' );
+
+/**
+ * Remove x-pingback HTTP header
+ */
+function remove_pingback_headers($headers) {
+    unset($headers['X-Pingback']);
+    return $headers;
+}
+
+add_filter('wp_headers', 'remove_pingback_headers');
